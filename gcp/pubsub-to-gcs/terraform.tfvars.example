@@ -1,0 +1,8 @@
+// GCP
+project_id              = ""
+service_account_json    = ""
+
+// Lacework
+lacework_account    = ""
+lacework_api_key    = ""
+lacework_api_secret = ""

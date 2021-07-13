@@ -1,0 +1,15 @@
+// Google Cloud
+gcp_audit_integration_name  = "audit-integration-name"
+gcp_audit_prefix            = "lw"
+gcp_config_integration_name = "config-integration-name"
+gcp_org_integration         = false
+gcp_project_ids             = [
+  "project-id-01", 
+  "project-id-02", 
+  "project-id-03",
+]
+
+// Lacework
+lacework_account    = "mylacework"
+lacework_api_key    = "MYLACEWO_1A2B3C4D5E6F7A8B9C0D"
+lacework_api_secret = "_a1b2c3d4e5f6a7b8c9d0"
