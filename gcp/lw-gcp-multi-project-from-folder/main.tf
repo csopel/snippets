@@ -5,7 +5,7 @@ module "gcp_service_account" {
 }
 
 data "google_projects" "folder-01" {
-  filter = "parent.id:270355715444"
+  filter = "parent.id:${var.gcp_folder_id}"
 }
 
 // Create Config Integration

@@ -3,12 +3,6 @@ lacework_account    = "my-lacework-instance"
 lacework_api_key    = "MYLACEWO_80E287884BD9F944AE9E194359374A96"
 lacework_api_secret = "_4ffdd5db1d8f8121d01b3519002e3f37"
 
-// Google Clodu
+// Google Cloud
 gcp_sa_project_id = "my-sa-project"
-gcp_project_ids = [
-  "project-id-01",
-  "project-id-02",
-  "project-id-03",
-  "project-id-04",
-  "project-id-05",
-]
+gcp_folder_id = 1234567890
