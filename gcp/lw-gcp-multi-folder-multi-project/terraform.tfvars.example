@@ -1,0 +1,8 @@
+// Lacework
+lacework_account    = "my-lacework-instance"
+lacework_api_key    = "MYLACEWO_80E287884BD9F944AE9E194359374A96"
+lacework_api_secret = "_4ffdd5db1d8f8121d01b3519002e3f37"
+
+// Google Cloud
+gcp_sa_project_id = "my-sa-project"
+gcp_folder_id = 1234567890
