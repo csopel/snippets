@@ -1,5 +1,5 @@
 ## Overview
-This code will generate a Lacework GCP Config integration for a list of projects ``gcp_project_ids`` using a single service account (as opposed to the [lw-gcp-multi-project-test](../lw-gcp-multi-project-test/) folder which will create a service account per integration)
+This code will generate a Lacework GCP Config integration for a list of projects under a single folder ``gcp_folder_id`` using a single service account (as opposed to the [lw-gcp-multi-project-test](../lw-gcp-multi-project-test/) folder which will create a service account per integration)
 
 ## Requirements
 
@@ -9,7 +9,9 @@ This code will generate a Lacework GCP Config integration for a list of projects
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_google"></a> [google](#provider\_google) | 3.74.0 |
 
 ## Modules
 
@@ -20,13 +22,15 @@ No providers.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [google_projects.folder-01](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/projects) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_gcp_project_ids"></a> [gcp\_project\_ids](#input\_gcp\_project\_ids) | Projects to integrate into Lacework | `list(any)` | n/a | yes |
+| <a name="input_gcp_folder_id"></a> [gcp\_folder\_id](#input\_gcp\_folder\_id) | Folder ID (numeric) that contains the projects to integrate into Lacework | `number` | n/a | yes |
 | <a name="input_gcp_sa_project_id"></a> [gcp\_sa\_project\_id](#input\_gcp\_sa\_project\_id) | Project for Lacework integration Service Account to reside in | `string` | n/a | yes |
 | <a name="input_lacework_account"></a> [lacework\_account](#input\_lacework\_account) | Lacework Account to integrate with | `string` | n/a | yes |
 | <a name="input_lacework_api_key"></a> [lacework\_api\_key](#input\_lacework\_api\_key) | API Key to use for Lacework integrations | `string` | n/a | yes |

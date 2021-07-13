@@ -15,9 +15,9 @@ variable "lacework_api_secret" {
 }
 
 // Google Cloud
-variable "gcp_project_ids" {
-  description = "Projects to integrate into Lacework"
-  type        = list(any)
+variable "gcp_folder_id" {
+  description = "Folder ID (numeric) that contains the projects to integrate into Lacework"
+  type        = number
 }
 
 variable "gcp_sa_project_id" {
