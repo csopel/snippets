@@ -49,16 +49,10 @@
               "widgets": [
                 {
                     "keyValue": {
-                      "topLabel": alert.EVENT_ID,
-                      "content": "" + sev + ": " + alert.EVENT_CATEGORY,
+                      "topLabel": alert.EVENT_ID + " " + alert.EVENT_CATEGORY,
+                      "content": "" + sev + ": " + alert.EVENT_NAME,
                       "bottomLabel": alert.START_TIME
                       }
-                },
-                {
-                  "keyValue": {
-                    "topLabel": "Event Name",
-                    "content": alert.EVENT_NAME
-                    }
                 }
               ]
             },
