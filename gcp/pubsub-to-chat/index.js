@@ -17,19 +17,19 @@
     case 0:
       sev = "<b>Test Event</b>";
       break;
-    case 1:
+    case 5:
       sev = "<b>Info</b>";
       break;
-    case 2:
+    case 4:
       sev = "<b><font color=#0000ff>Low</b></font>";
       break;
     case 3:
       sev = "<b><font color=#ffff00>Medium</b></font>";
       break;
-    case 4:
+    case 2:
       sev = "<b><font color=#ffa500>HIGH</b></font>";
       break;
-    case 5:
+    case 1:
       sev = "<b><font color=#FF0000>CRITICAL</b></font>";
       break;
     default:
