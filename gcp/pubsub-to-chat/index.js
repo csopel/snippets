@@ -6,7 +6,7 @@
  * @param {object} context The event metadata.
  */
 
- exports.helloWorld = (message, context) => {
+ exports.laceworkAlert = (message, context) => {
   const fetch = require('node-fetch');
   const webhookUrl = process.env.webhookUrl;
   const laceworkUrl = process.env.laceworkUrl;
