@@ -8,7 +8,7 @@ Manual steps to create:
 1. Create an [incoming webhook](https://developers.google.com/chat/how-tos/webhooks) in the Google Chat room and copy the URL for use in a later step
 2. Create a Lambda using the index.js file in this repository
   * You'll need to create four environment variables in the Lambda:
-    * `chatHost` is the hostname for the Google Chat webhook from earlier in the steps (usually `chat.google.com`)
+    * `chatHost` is the hostname for the Google Chat webhook from earlier in the steps (usually `chat.googleapis.com`)
     * `chatPath` is the remaining path (including the leading `/`) from the Google Chat webhook, including the `key` and `token` attributes
     * `laceworkUrl` is the URL of your Lacework instance - this is purely aesthetic
     * `logoUrl` is the URL of the logo you wish to have the bot display in the alerts
