@@ -27,9 +27,9 @@ const post = (payload) => new Promise((resolve, reject) => {
 });
 
 exports.handler = async (event, context) => new Promise( async (resolve, reject) => {
-  const alert = JSON.parse(Buffer.from(event.body).toString());
+  const alert = event.detail;
   let sev = null;
-  switch (parseInt(alert.event_severity,10)) {
+  switch (parseInt(alert.SEVERITY,10)) {
     case 0:
       sev = "<b>Test Event</b>";
       break;
@@ -51,7 +51,7 @@ exports.handler = async (event, context) => new Promise( async (resolve, reject)
     default:
       sev = "Unknown Severity";
   }
-  
+  console.log(sev);
   const data = JSON.stringify(
     {
       "cards": [
@@ -66,9 +66,9 @@ exports.handler = async (event, context) => new Promise( async (resolve, reject)
               "widgets": [
                 {
                     "keyValue": {
-                      "topLabel": alert.event_id + " - " + alert.event_source,
-                      "content": "" + sev + ": " + alert.event_title,
-                      "bottomLabel": alert.event_timestamp
+                      "topLabel": alert.EVENT_ID + " - " + alert.EVENT_CATEGORY,
+                      "content": "" + sev + ": " + alert.EVENT_NAME,
+                      "bottomLabel": alert.START_TIME
                       }
                 }
               ]
@@ -78,7 +78,7 @@ exports.handler = async (event, context) => new Promise( async (resolve, reject)
               "widgets": [
                 {
                   "textParagraph": {
-                    "text": alert.event_description
+                    "text": alert.SUMMARY
                   }
                 }
               ]
@@ -92,7 +92,7 @@ exports.handler = async (event, context) => new Promise( async (resolve, reject)
                         "text": "View in Lacework",
                         "onClick": {
                           "openLink": {
-                            "url": alert.event_link
+                            "url": alert.LINK
                           }
                         }
                       }
@@ -108,12 +108,5 @@ exports.handler = async (event, context) => new Promise( async (resolve, reject)
   );
 
   await post(data);
-
-  let gatewayResponse = {
-        statusCode: 200,
-        body: JSON.stringify('Lambda invoked successfully'),
-  };
-
-  resolve(gatewayResponse);
 
 });
